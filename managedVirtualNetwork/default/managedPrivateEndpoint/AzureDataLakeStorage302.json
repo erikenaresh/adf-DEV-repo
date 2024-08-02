@@ -1,7 +1,0 @@
-{
-	"name": "AzureDataLakeStorage302",
-	"properties": {
-		"privateLinkResourceId": "/subscriptions/2bc54c44-950e-49bc-b716-3fdd96db6f53/resourceGroups/RG-Naresh/providers/Microsoft.Storage/storageAccounts/sgnaresh07",
-		"groupId": "dfs"
-	}
-}
