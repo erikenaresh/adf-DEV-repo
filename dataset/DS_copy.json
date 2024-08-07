@@ -1,0 +1,23 @@
+{
+	"name": "DS_copy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_copy",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pranay": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": {
+				"value": "@dataset().pranay",
+				"type": "Expression"
+			}
+		}
+	}
+}

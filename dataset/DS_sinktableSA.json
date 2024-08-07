@@ -1,0 +1,15 @@
+{
+	"name": "DS_sinktableSA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sinktableSA",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "sample123"
+		}
+	}
+}
