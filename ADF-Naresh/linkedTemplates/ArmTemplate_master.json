@@ -7,41 +7,61 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-Naresh"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlDatabase3_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase3'"
 		},
 		"AzureTableStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage1'"
 		},
-		"LS_CosmosDbNoSl_connectionString": {
+		"AzureTableStorage2_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'LS_CosmosDbNoSl'"
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage2'"
 		},
-		"LS_DFtext_connectionString": {
+		"AzureTableStorage3_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'LS_DFtext'"
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage3'"
+		},
+		"AzureTableStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage4'"
+		},
+		"AzureTableStorage5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage5'"
 		},
 		"LS_copy_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_copy'"
-		},
-		"LS_copyinput_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copyinput'"
-		},
-		"LS_copyoutput_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copyoutput'"
-		},
-		"LS_copytableSC_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copytableSC'"
-		},
-		"LS_sample_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sample'"
 		},
 		"LS_sinkcopy_connectionString": {
 			"type": "secureString",
@@ -51,89 +71,49 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_sinktableSA'"
 		},
-		"LS_sqltest_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sqltest'"
-		},
-		"LS_testsink_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_testsink'"
-		},
-		"ls_cosmos_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_cosmos'"
-		},
-		"ls_test_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ls_test'"
-		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyinput_properties_typeProperties_url": {
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyoutput_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_copytableSC_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_sample_properties_typeProperties_server": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"LS_sample_properties_typeProperties_database": {
+		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "DB-naresh"
 		},
-		"LS_sample_properties_typeProperties_userName": {
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
 		},
-		"LS_sqltest_properties_typeProperties_server": {
+		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"LS_sqltest_properties_typeProperties_database": {
+		"AzureSqlDatabase2_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "DB-naresh"
+			"defaultValue": "master"
 		},
-		"LS_sqltest_properties_typeProperties_userName": {
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
 		},
-		"LS_testsink_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_cosmos_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_test_properties_typeProperties_server": {
+		"AzureSqlDatabase3_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"ls_test_properties_typeProperties_database": {
+		"AzureSqlDatabase3_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "DB-naresh"
 		},
-		"ls_test_properties_typeProperties_userName": {
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
-		},
-		"AzureDataLakeStorage240_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/2bc54c44-950e-49bc-b716-3fdd96db6f53/resourceGroups/RG-Naresh/providers/Microsoft.Storage/storageAccounts/sgnaresh07"
-		},
-		"AzureDataLakeStorage240_properties_groupId": {
-			"type": "string",
-			"defaultValue": "dfs"
 		},
 		"containerUri": {
 			"type": "string",
@@ -162,26 +142,47 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureBlobStorage3_connectionString": {
+						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"AzureSqlDatabase3_password": {
+						"value": "[parameters('AzureSqlDatabase3_password')]"
+					},
 					"AzureTableStorage1_connectionString": {
 						"value": "[parameters('AzureTableStorage1_connectionString')]"
 					},
-					"LS_CosmosDbNoSl_connectionString": {
-						"value": "[parameters('LS_CosmosDbNoSl_connectionString')]"
+					"AzureTableStorage2_connectionString": {
+						"value": "[parameters('AzureTableStorage2_connectionString')]"
 					},
-					"LS_DFtext_connectionString": {
-						"value": "[parameters('LS_DFtext_connectionString')]"
+					"AzureTableStorage3_connectionString": {
+						"value": "[parameters('AzureTableStorage3_connectionString')]"
+					},
+					"AzureTableStorage4_connectionString": {
+						"value": "[parameters('AzureTableStorage4_connectionString')]"
+					},
+					"AzureTableStorage5_connectionString": {
+						"value": "[parameters('AzureTableStorage5_connectionString')]"
 					},
 					"LS_copy_connectionString": {
 						"value": "[parameters('LS_copy_connectionString')]"
-					},
-					"LS_copyinput_accountKey": {
-						"value": "[parameters('LS_copyinput_accountKey')]"
-					},
-					"LS_copyoutput_accountKey": {
-						"value": "[parameters('LS_copyoutput_accountKey')]"
-					},
-					"LS_copytableSC_accountKey": {
-						"value": "[parameters('LS_copytableSC_accountKey')]"
 					},
 					"LS_sinkcopy_connectionString": {
 						"value": "[parameters('LS_sinkcopy_connectionString')]"
@@ -189,44 +190,38 @@
 					"LS_sinktableSA_connectionString": {
 						"value": "[parameters('LS_sinktableSA_connectionString')]"
 					},
-					"ls_cosmos_accountKey": {
-						"value": "[parameters('ls_cosmos_accountKey')]"
-					},
-					"AzureDataLakeStorage1_accountKey": {
-						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
-					},
-					"LS_sample_password": {
-						"value": "[parameters('LS_sample_password')]"
-					},
-					"LS_testsink_accountKey": {
-						"value": "[parameters('LS_testsink_accountKey')]"
-					},
-					"LS_copyinput_properties_typeProperties_url": {
-						"value": "[parameters('LS_copyinput_properties_typeProperties_url')]"
-					},
-					"LS_copyoutput_properties_typeProperties_url": {
-						"value": "[parameters('LS_copyoutput_properties_typeProperties_url')]"
-					},
-					"LS_copytableSC_properties_typeProperties_url": {
-						"value": "[parameters('LS_copytableSC_properties_typeProperties_url')]"
-					},
-					"ls_cosmos_properties_typeProperties_url": {
-						"value": "[parameters('ls_cosmos_properties_typeProperties_url')]"
-					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
-					"LS_sample_properties_typeProperties_server": {
-						"value": "[parameters('LS_sample_properties_typeProperties_server')]"
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
 					},
-					"LS_sample_properties_typeProperties_database": {
-						"value": "[parameters('LS_sample_properties_typeProperties_database')]"
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
 					},
-					"LS_sample_properties_typeProperties_userName": {
-						"value": "[parameters('LS_sample_properties_typeProperties_userName')]"
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
 					},
-					"LS_testsink_properties_typeProperties_url": {
-						"value": "[parameters('LS_testsink_properties_typeProperties_url')]"
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -245,36 +240,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"LS_sqltest_password": {
-						"value": "[parameters('LS_sqltest_password')]"
-					},
-					"ls_test_password": {
-						"value": "[parameters('ls_test_password')]"
-					},
-					"AzureDataLakeStorage240_properties_privateLinkResourceId": {
-						"value": "[parameters('AzureDataLakeStorage240_properties_privateLinkResourceId')]"
-					},
-					"AzureDataLakeStorage240_properties_groupId": {
-						"value": "[parameters('AzureDataLakeStorage240_properties_groupId')]"
-					},
-					"LS_sqltest_properties_typeProperties_server": {
-						"value": "[parameters('LS_sqltest_properties_typeProperties_server')]"
-					},
-					"LS_sqltest_properties_typeProperties_database": {
-						"value": "[parameters('LS_sqltest_properties_typeProperties_database')]"
-					},
-					"LS_sqltest_properties_typeProperties_userName": {
-						"value": "[parameters('LS_sqltest_properties_typeProperties_userName')]"
-					},
-					"ls_test_properties_typeProperties_server": {
-						"value": "[parameters('ls_test_properties_typeProperties_server')]"
-					},
-					"ls_test_properties_typeProperties_database": {
-						"value": "[parameters('ls_test_properties_typeProperties_database')]"
-					},
-					"ls_test_properties_typeProperties_userName": {
-						"value": "[parameters('ls_test_properties_typeProperties_userName')]"
 					}
 				}
 			},

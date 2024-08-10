@@ -5,31 +5,46 @@
 		"factoryName": {
 			"value": "ADF-Naresh"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_password": {
 			"value": ""
 		},
 		"AzureTableStorage1_connectionString": {
 			"value": ""
 		},
-		"LS_CosmosDbNoSl_connectionString": {
+		"AzureTableStorage2_connectionString": {
 			"value": ""
 		},
-		"LS_DFtext_connectionString": {
+		"AzureTableStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureTableStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureTableStorage5_connectionString": {
 			"value": ""
 		},
 		"LS_copy_connectionString": {
-			"value": ""
-		},
-		"LS_copyinput_accountKey": {
-			"value": ""
-		},
-		"LS_copyoutput_accountKey": {
-			"value": ""
-		},
-		"LS_copytableSC_accountKey": {
-			"value": ""
-		},
-		"LS_sample_password": {
 			"value": ""
 		},
 		"LS_sinkcopy_connectionString": {
@@ -38,68 +53,38 @@
 		"LS_sinktableSA_connectionString": {
 			"value": ""
 		},
-		"LS_sqltest_password": {
-			"value": ""
-		},
-		"LS_testsink_accountKey": {
-			"value": ""
-		},
-		"ls_cosmos_accountKey": {
-			"value": ""
-		},
-		"ls_test_password": {
-			"value": ""
-		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyinput_properties_typeProperties_url": {
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyoutput_properties_typeProperties_url": {
-			"value": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_copytableSC_properties_typeProperties_url": {
-			"value": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_sample_properties_typeProperties_server": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "naresherike.database.windows.net"
 		},
-		"LS_sample_properties_typeProperties_database": {
+		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"value": "DB-naresh"
 		},
-		"LS_sample_properties_typeProperties_userName": {
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"value": "Naresh"
 		},
-		"LS_sqltest_properties_typeProperties_server": {
+		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"value": "naresherike.database.windows.net"
 		},
-		"LS_sqltest_properties_typeProperties_database": {
-			"value": "DB-naresh"
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "master"
 		},
-		"LS_sqltest_properties_typeProperties_userName": {
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"value": "Naresh"
 		},
-		"LS_testsink_properties_typeProperties_url": {
-			"value": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_cosmos_properties_typeProperties_url": {
-			"value": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_test_properties_typeProperties_server": {
+		"AzureSqlDatabase3_properties_typeProperties_server": {
 			"value": "naresherike.database.windows.net"
 		},
-		"ls_test_properties_typeProperties_database": {
+		"AzureSqlDatabase3_properties_typeProperties_database": {
 			"value": "DB-naresh"
 		},
-		"ls_test_properties_typeProperties_userName": {
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"value": "Naresh"
-		},
-		"AzureDataLakeStorage240_properties_privateLinkResourceId": {
-			"value": "/subscriptions/2bc54c44-950e-49bc-b716-3fdd96db6f53/resourceGroups/RG-Naresh/providers/Microsoft.Storage/storageAccounts/sgnaresh07"
-		},
-		"AzureDataLakeStorage240_properties_groupId": {
-			"value": "dfs"
 		},
 		"containerUri": {
 			"value": ""

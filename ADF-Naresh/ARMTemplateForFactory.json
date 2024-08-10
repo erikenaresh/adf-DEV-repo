@@ -7,41 +7,61 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-Naresh"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlDatabase3_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase3'"
 		},
 		"AzureTableStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage1'"
 		},
-		"LS_CosmosDbNoSl_connectionString": {
+		"AzureTableStorage2_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'LS_CosmosDbNoSl'"
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage2'"
 		},
-		"LS_DFtext_connectionString": {
+		"AzureTableStorage3_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'LS_DFtext'"
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage3'"
+		},
+		"AzureTableStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage4'"
+		},
+		"AzureTableStorage5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage5'"
 		},
 		"LS_copy_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_copy'"
-		},
-		"LS_copyinput_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copyinput'"
-		},
-		"LS_copyoutput_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copyoutput'"
-		},
-		"LS_copytableSC_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_copytableSC'"
-		},
-		"LS_sample_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sample'"
 		},
 		"LS_sinkcopy_connectionString": {
 			"type": "secureString",
@@ -51,89 +71,49 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_sinktableSA'"
 		},
-		"LS_sqltest_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sqltest'"
-		},
-		"LS_testsink_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'LS_testsink'"
-		},
-		"ls_cosmos_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_cosmos'"
-		},
-		"ls_test_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ls_test'"
-		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyinput_properties_typeProperties_url": {
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
 		},
-		"LS_copyoutput_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_copytableSC_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"LS_sample_properties_typeProperties_server": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"LS_sample_properties_typeProperties_database": {
+		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "DB-naresh"
 		},
-		"LS_sample_properties_typeProperties_userName": {
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
 		},
-		"LS_sqltest_properties_typeProperties_server": {
+		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"LS_sqltest_properties_typeProperties_database": {
+		"AzureSqlDatabase2_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "DB-naresh"
+			"defaultValue": "master"
 		},
-		"LS_sqltest_properties_typeProperties_userName": {
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
 		},
-		"LS_testsink_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_cosmos_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://sgnaresh07.dfs.core.windows.net/"
-		},
-		"ls_test_properties_typeProperties_server": {
+		"AzureSqlDatabase3_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "naresherike.database.windows.net"
 		},
-		"ls_test_properties_typeProperties_database": {
+		"AzureSqlDatabase3_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "DB-naresh"
 		},
-		"ls_test_properties_typeProperties_userName": {
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Naresh"
-		},
-		"AzureDataLakeStorage240_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/2bc54c44-950e-49bc-b716-3fdd96db6f53/resourceGroups/RG-Naresh/providers/Microsoft.Storage/storageAccounts/sgnaresh07"
-		},
-		"AzureDataLakeStorage240_properties_groupId": {
-			"type": "string",
-			"defaultValue": "dfs"
 		}
 	},
 	"variables": {
@@ -162,7 +142,7 @@
 							"source": {
 								"type": "DelimitedTextSource",
 								"storeSettings": {
-									"type": "AzureBlobFSReadSettings",
+									"type": "AzureBlobStorageReadSettings",
 									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
@@ -171,9 +151,11 @@
 								}
 							},
 							"sink": {
-								"type": "AzureTableSink",
-								"azureTableInsertType": "merge",
-								"writeBatchSize": 10000
+								"type": "AzureSqlSink",
+								"writeBatchSize": 100000,
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"disableMetricsCollection": false
 							},
 							"enableStaging": false,
 							"translator": {
@@ -187,14 +169,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "DS_copytableSC",
+								"referenceName": "DelimitedText1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "DS_sinktableSA",
+								"referenceName": "AzureSqlTable1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -207,157 +189,47 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/DS_copytableSC')]",
-				"[concat(variables('factoryId'), '/datasets/DS_sinktableSA')]"
+				"[concat(variables('factoryId'), '/datasets/DelimitedText1')]",
+				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline2')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "ForEach1",
-						"type": "ForEach",
-						"dependsOn": [],
-						"userProperties": [],
-						"typeProperties": {
-							"items": {
-								"value": "@pipeline().parameters.sample123",
-								"type": "Expression"
-							},
-							"activities": [
-								{
-									"name": "Copy data1",
-									"type": "Copy",
-									"dependsOn": [],
-									"policy": {
-										"timeout": "0.12:00:00",
-										"retry": 0,
-										"retryIntervalInSeconds": 30,
-										"secureOutput": false,
-										"secureInput": false
-									},
-									"userProperties": [],
-									"typeProperties": {
-										"source": {
-											"type": "AzureTableSource",
-											"azureTableSourceIgnoreTableNotFound": false
-										},
-										"sink": {
-											"type": "AzureTableSink",
-											"azureTableInsertType": "merge",
-											"writeBatchSize": 10000
-										},
-										"enableStaging": false,
-										"translator": {
-											"type": "TabularTranslator",
-											"typeConversion": true,
-											"typeConversionSettings": {
-												"allowDataTruncation": true,
-												"treatBooleanAsNumber": false
-											}
-										}
-									},
-									"inputs": [
-										{
-											"referenceName": "DS_copy",
-											"type": "DatasetReference",
-											"parameters": {
-												"pranay": {
-													"value": "@item().source.tableName",
-													"type": "Expression"
-												}
-											}
-										}
-									],
-									"outputs": [
-										{
-											"referenceName": "DS_sinkcopy",
-											"type": "DatasetReference",
-											"parameters": {
-												"pranayy": {
-													"value": "@item().destination.tableName",
-													"type": "Expression"
-												}
-											}
-										}
-									]
-								}
-							]
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"parameters": {
-					"sample123": {
-						"type": "array",
-						"defaultValue": [
-							{
-								"source": {
-									"tableName": "sample123"
-								},
-								"destination": {
-									"tableName": "sample123"
-								}
-							}
-						]
-					}
-				},
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/DS_copy')]",
-				"[concat(variables('factoryId'), '/datasets/DS_sinkcopy')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/DS_copy')]",
+			"name": "[concat(parameters('factoryName'), '/AzureSqlTable1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "LS_copy",
+					"referenceName": "AzureSqlDatabase3",
 					"type": "LinkedServiceReference"
 				},
-				"parameters": {
-					"pranay": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
-				"type": "AzureTable",
+				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"tableName": {
-						"value": "@dataset().pranay",
-						"type": "Expression"
-					}
+					"schema": "dbo",
+					"table": "TEST"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/LS_copy')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase3')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DS_copytableSC')]",
+			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "LS_copytableSC",
+					"referenceName": "AzureBlobStorage3",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": "data.csv",
-						"fileSystem": "csvfiles"
+						"type": "AzureBlobStorageLocation",
+						"fileName": "file.csv.csv",
+						"container": "input"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
@@ -366,78 +238,89 @@
 				},
 				"schema": [
 					{
-						"name": "data_0_0",
+						"name": "Column1",
 						"type": "String"
 					},
 					{
-						"name": "data_0_1",
+						"name": "Column2",
 						"type": "String"
 					},
 					{
-						"name": "data_0_2",
+						"name": "Column3",
 						"type": "String"
 					},
 					{
-						"name": "data_0_3",
+						"name": "Column4",
 						"type": "String"
 					},
 					{
-						"name": "data_0_4",
+						"name": "Column5",
+						"type": "String"
+					},
+					{
+						"name": "Column6",
+						"type": "String"
+					},
+					{
+						"name": "Column7",
+						"type": "String"
+					},
+					{
+						"name": "Column8",
+						"type": "String"
+					},
+					{
+						"name": "Column9",
+						"type": "String"
+					},
+					{
+						"name": "Column10",
 						"type": "String"
 					}
 				]
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/LS_copytableSC')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage3')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DS_sinkcopy')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"linkedServiceName": {
-					"referenceName": "LS_sinkcopy",
-					"type": "LinkedServiceReference"
-				},
-				"parameters": {
-					"pranayy": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
-				"type": "AzureTable",
-				"schema": [],
+				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"tableName": {
-						"value": "@dataset().pranayy",
-						"type": "Expression"
-					}
+					"connectionString": "[parameters('AzureBlobStorage1_connectionString')]"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/LS_sinkcopy')]"
-			]
+			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DS_sinktableSA')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage2')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"linkedServiceName": {
-					"referenceName": "LS_sinktableSA",
-					"type": "LinkedServiceReference"
-				},
 				"annotations": [],
-				"type": "AzureTable",
-				"schema": [],
+				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"tableName": "sample123"
+					"connectionString": "[parameters('AzureBlobStorage2_connectionString')]"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/LS_sinktableSA')]"
-			]
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage3')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage3_connectionString')]"
+				}
+			},
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",
@@ -452,15 +335,92 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					}
-				},
-				"connectVia": {
-					"referenceName": "SHIR-Naresh",
-					"type": "IntegrationRuntimeReference"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR-Naresh')]"
-			]
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage2')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]",
+					"database": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase2')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]",
+					"database": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase3')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('AzureSqlDatabase3_properties_typeProperties_server')]",
+					"database": "[parameters('AzureSqlDatabase3_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('AzureSqlDatabase3_password')]"
+					}
+				}
+			},
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureTableStorage1')]",
@@ -476,27 +436,53 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/LS_CosmosDbNoSl')]",
+			"name": "[concat(parameters('factoryName'), '/AzureTableStorage2')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"type": "CosmosDb",
+				"type": "AzureTableStorage",
 				"typeProperties": {
-					"connectionString": "[parameters('LS_CosmosDbNoSl_connectionString')]"
+					"connectionString": "[parameters('AzureTableStorage2_connectionString')]"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/LS_DFtext')]",
+			"name": "[concat(parameters('factoryName'), '/AzureTableStorage3')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"type": "AzureBlobStorage",
+				"type": "AzureTableStorage",
 				"typeProperties": {
-					"connectionString": "[parameters('LS_DFtext_connectionString')]"
+					"connectionString": "[parameters('AzureTableStorage3_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureTableStorage4')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureTableStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureTableStorage4_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureTableStorage5')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureTableStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureTableStorage5_connectionString')]"
 				}
 			},
 			"dependsOn": []
@@ -513,85 +499,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_copyinput')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('LS_copyinput_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('LS_copyinput_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_copyoutput')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('LS_copyoutput_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('LS_copyoutput_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_copytableSC')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('LS_copytableSC_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('LS_copytableSC_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_sample')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('LS_sample_properties_typeProperties_server')]",
-					"database": "[parameters('LS_sample_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_sample_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_sample_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "SHIR-Naresh",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR-Naresh')]"
-			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/LS_sinkcopy')]",
@@ -618,102 +525,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_sqltest')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('LS_sqltest_properties_typeProperties_server')]",
-					"database": "[parameters('LS_sqltest_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_sqltest_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_sqltest_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "nununininijiojoj",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/nununininijiojoj')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_testsink')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('LS_testsink_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('LS_testsink_accountKey')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "SHIR-Naresh",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR-Naresh')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_cosmos')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('ls_cosmos_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('ls_cosmos_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_test')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('ls_test_properties_typeProperties_server')]",
-					"database": "[parameters('ls_test_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ls_test_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ls_test_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime1",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
-			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SHIR-Naresh')]",
@@ -795,18 +606,6 @@
 			"apiVersion": "2018-06-01",
 			"properties": {},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/default/AzureDataLakeStorage240')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('AzureDataLakeStorage240_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('AzureDataLakeStorage240_properties_groupId')]"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
 		}
 	]
 }

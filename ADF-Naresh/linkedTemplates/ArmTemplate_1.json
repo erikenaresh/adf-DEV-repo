@@ -6,52 +6,42 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-Naresh"
-		},
-		"LS_sqltest_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sqltest'"
-		},
-		"ls_test_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ls_test'"
-		},
-		"AzureDataLakeStorage240_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/2bc54c44-950e-49bc-b716-3fdd96db6f53/resourceGroups/RG-Naresh/providers/Microsoft.Storage/storageAccounts/sgnaresh07"
-		},
-		"AzureDataLakeStorage240_properties_groupId": {
-			"type": "string",
-			"defaultValue": "dfs"
-		},
-		"LS_sqltest_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "naresherike.database.windows.net"
-		},
-		"LS_sqltest_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "DB-naresh"
-		},
-		"LS_sqltest_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "Naresh"
-		},
-		"ls_test_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "naresherike.database.windows.net"
-		},
-		"ls_test_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "DB-naresh"
-		},
-		"ls_test_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "Naresh"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "Managed",
+				"typeProperties": {
+					"computeProperties": {
+						"location": "East US",
+						"dataFlowProperties": {
+							"computeType": "General",
+							"coreCount": 8,
+							"timeToLive": 10,
+							"cleanup": false,
+							"customProperties": []
+						},
+						"pipelineExternalComputeScaleProperties": {
+							"timeToLive": 60,
+							"numberOfPipelineNodes": 1,
+							"numberOfExternalNodes": 1
+						}
+					}
+				},
+				"managedVirtualNetwork": {
+					"type": "ManagedVirtualNetworkReference",
+					"referenceName": "default"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/nununininijiojoj')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
@@ -83,16 +73,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/default/AzureDataLakeStorage240')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('AzureDataLakeStorage240_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('AzureDataLakeStorage240_properties_groupId')]"
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -114,7 +94,7 @@
 							"source": {
 								"type": "DelimitedTextSource",
 								"storeSettings": {
-									"type": "AzureBlobFSReadSettings",
+									"type": "AzureBlobStorageReadSettings",
 									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
@@ -123,9 +103,11 @@
 								}
 							},
 							"sink": {
-								"type": "AzureTableSink",
-								"azureTableInsertType": "merge",
-								"writeBatchSize": 10000
+								"type": "AzureSqlSink",
+								"writeBatchSize": 100000,
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"disableMetricsCollection": false
 							},
 							"enableStaging": false,
 							"translator": {
@@ -139,14 +121,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "DS_copytableSC",
+								"referenceName": "DelimitedText1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "DS_sinktableSA",
+								"referenceName": "AzureSqlTable1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -157,160 +139,6 @@
 					"elapsedTimeMetric": {}
 				},
 				"annotations": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pipeline2')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "ForEach1",
-						"type": "ForEach",
-						"dependsOn": [],
-						"userProperties": [],
-						"typeProperties": {
-							"items": {
-								"value": "@pipeline().parameters.sample123",
-								"type": "Expression"
-							},
-							"activities": [
-								{
-									"name": "Copy data1",
-									"type": "Copy",
-									"dependsOn": [],
-									"policy": {
-										"timeout": "0.12:00:00",
-										"retry": 0,
-										"retryIntervalInSeconds": 30,
-										"secureOutput": false,
-										"secureInput": false
-									},
-									"userProperties": [],
-									"typeProperties": {
-										"source": {
-											"type": "AzureTableSource",
-											"azureTableSourceIgnoreTableNotFound": false
-										},
-										"sink": {
-											"type": "AzureTableSink",
-											"azureTableInsertType": "merge",
-											"writeBatchSize": 10000
-										},
-										"enableStaging": false,
-										"translator": {
-											"type": "TabularTranslator",
-											"typeConversion": true,
-											"typeConversionSettings": {
-												"allowDataTruncation": true,
-												"treatBooleanAsNumber": false
-											}
-										}
-									},
-									"inputs": [
-										{
-											"referenceName": "DS_copy",
-											"type": "DatasetReference",
-											"parameters": {
-												"pranay": {
-													"value": "@item().source.tableName",
-													"type": "Expression"
-												}
-											}
-										}
-									],
-									"outputs": [
-										{
-											"referenceName": "DS_sinkcopy",
-											"type": "DatasetReference",
-											"parameters": {
-												"pranayy": {
-													"value": "@item().destination.tableName",
-													"type": "Expression"
-												}
-											}
-										}
-									]
-								}
-							]
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"parameters": {
-					"sample123": {
-						"type": "array",
-						"defaultValue": [
-							{
-								"source": {
-									"tableName": "sample123"
-								},
-								"destination": {
-									"tableName": "sample123"
-								}
-							}
-						]
-					}
-				},
-				"annotations": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_sqltest')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('LS_sqltest_properties_typeProperties_server')]",
-					"database": "[parameters('LS_sqltest_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_sqltest_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_sqltest_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "nununininijiojoj",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/nununininijiojoj')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_test')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('ls_test_properties_typeProperties_server')]",
-					"database": "[parameters('ls_test_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ls_test_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ls_test_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime1",
-					"type": "IntegrationRuntimeReference"
-				}
 			},
 			"dependsOn": []
 		}
